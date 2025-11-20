@@ -1,0 +1,165 @@
+{
+  "name": "BarberShop",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do salão"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descrição do salão"
+    },
+    "owner_email": {
+      "type": "string",
+      "description": "Email do dono (relaciona com User)"
+    },
+    "address": {
+      "type": "string",
+      "description": "Endereço completo"
+    },
+    "city": {
+      "type": "string",
+      "description": "Cidade"
+    },
+    "state": {
+      "type": "string",
+      "description": "Estado"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone de contato"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "URL da imagem de capa do salão"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "URL do logo do salão"
+    },
+    "working_hours": {
+      "type": "object",
+      "description": "Horários de funcionamento",
+      "properties": {
+        "monday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "tuesday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "wednesday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "thursday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "friday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "saturday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "sunday": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "string"
+            },
+            "close": {
+              "type": "string"
+            },
+            "closed": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "rating": {
+      "type": "number",
+      "description": "Avaliação média (0-5)"
+    },
+    "total_reviews": {
+      "type": "number",
+      "description": "Número total de avaliações"
+    },
+    "is_active": {
+      "type": "boolean",
+      "description": "Se o salão está ativo e aceitando agendamentos",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "owner_email",
+    "city",
+    "phone"
+  ]
+}

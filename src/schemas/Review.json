@@ -1,0 +1,35 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "barber_shop_id": {
+      "type": "string",
+      "description": "ID do salão avaliado"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "ID do cliente que avaliou"
+    },
+    "customer_name": {
+      "type": "string",
+      "description": "Nome do cliente"
+    },
+    "appointment_id": {
+      "type": "string",
+      "description": "ID do agendamento relacionado"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Nota de 1 a 5"
+    },
+    "comment": {
+      "type": "string",
+      "description": "Comentário da avaliação"
+    }
+  },
+  "required": [
+    "barber_shop_id",
+    "customer_id",
+    "rating"
+  ]
+}

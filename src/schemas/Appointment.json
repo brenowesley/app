@@ -1,0 +1,97 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "description": "ID do cliente"
+    },
+    "customer_name": {
+      "type": "string",
+      "description": "Nome do cliente (cache)"
+    },
+    "customer_phone": {
+      "type": "string",
+      "description": "Telefone do cliente (cache)"
+    },
+    "barber_shop_id": {
+      "type": "string",
+      "description": "ID do salão"
+    },
+    "barber_shop_name": {
+      "type": "string",
+      "description": "Nome do salão (cache)"
+    },
+    "service_id": {
+      "type": "string",
+      "description": "ID do serviço"
+    },
+    "service_name": {
+      "type": "string",
+      "description": "Nome do serviço (cache)"
+    },
+    "service_price": {
+      "type": "number",
+      "description": "Preço do serviço (cache)"
+    },
+    "professional_email": {
+      "type": "string",
+      "description": "Email do profissional responsável"
+    },
+    "professional_name": {
+      "type": "string",
+      "description": "Nome do profissional"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do agendamento"
+    },
+    "time": {
+      "type": "string",
+      "description": "Hora do agendamento (formato HH:mm)"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Duração em minutos"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "in_progress",
+        "completed",
+        "cancelled",
+        "no_show"
+      ],
+      "default": "pending",
+      "description": "Status do agendamento"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observações do cliente"
+    },
+    "cancellation_reason": {
+      "type": "string",
+      "description": "Motivo do cancelamento, se aplicável"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "refunded"
+      ],
+      "default": "pending",
+      "description": "Status do pagamento"
+    }
+  },
+  "required": [
+    "customer_id",
+    "barber_shop_id",
+    "service_id",
+    "date",
+    "time"
+  ]
+}
